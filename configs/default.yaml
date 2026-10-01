@@ -1,0 +1,33 @@
+# Default experiment: A/B conversion uplift under unequal allocation
+seed: 42
+
+# True generative parameters (known in the lab; unknown in a real experiment)
+process:
+  p_control: 0.08
+  p_treatment: 0.095
+  n_control: 5000
+  n_treatment: 2000
+
+# Monte Carlo: many synthetic experiments → sampling distribution of uplift
+monte_carlo:
+  n_experiments: 5000
+
+# Bootstrap CI on one observed experiment
+bootstrap:
+  n_resamples: 4000
+  ci_level: 0.95
+
+# Coverage study: fraction of CIs that contain true relative uplift
+coverage:
+  n_trials: 400
+  n_bootstrap: 800
+
+# Convergence of CI half-width vs total sample size (scale base n)
+convergence:
+  scale_factors: [0.25, 0.5, 1.0, 2.0, 4.0]
+  n_bootstrap: 1500
+
+paths:
+  metrics: reports/latest/metrics.json
+  figures: reports/figures
+  snapshot: reports/snapshots/expected_metrics.json

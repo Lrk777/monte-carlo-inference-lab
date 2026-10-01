@@ -1,0 +1,30 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "monte-carlo-inference"
+version = "0.1.0"
+description = "Monte Carlo + bootstrap inference for A/B conversion uplift under unequal traffic"
+readme = "README.md"
+requires-python = ">=3.11"
+license = { text = "MIT" }
+authors = [{ name = "Lrk777" }]
+dependencies = [
+  "numpy>=1.26",
+  "matplotlib>=3.8",
+  "PyYAML>=6.0",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8.0"]
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["src*"]
+
+[tool.pytest.ini_options]
+markers = [
+  "slow: larger Monte Carlo grids (deselect with -m 'not slow')",
+]
+testpaths = ["tests"]

@@ -1,0 +1,11 @@
+{
+  "seed": 42,
+  "true_relative_uplift": 0.1875,
+  "monte_carlo_mean": 0.185434,
+  "monte_carlo_std": 0.101358,
+  "bootstrap_point": 0.157289,
+  "bootstrap_lower": -0.026128,
+  "bootstrap_upper": 0.364919,
+  "bootstrap_coverage": 0.945,
+  "normal_coverage": 0.9475
+}

@@ -1,0 +1,108 @@
+{
+  "seed": 42,
+  "process": {
+    "p_control": 0.08,
+    "p_treatment": 0.095,
+    "n_control": 5000,
+    "n_treatment": 2000,
+    "true_absolute_uplift": 0.015,
+    "true_relative_uplift": 0.1875
+  },
+  "observed_experiment": {
+    "rate_control": 0.0782,
+    "rate_treatment": 0.0905,
+    "absolute_uplift": 0.012299999999999991,
+    "relative_uplift": 0.15728900255754463
+  },
+  "monte_carlo": {
+    "n_experiments": 5000,
+    "n_finite": 5000,
+    "mean": 0.1854338544118237,
+    "median": 0.1818744374437444,
+    "std": 0.1013582389501125,
+    "p05": 0.02517985611510797,
+    "p95": 0.3584246198479392,
+    "bias": -0.0020661455881763047,
+    "rmse": 0.10136916129740361,
+    "truth": 0.1875
+  },
+  "bootstrap_ci": {
+    "point": 0.15728900255754463,
+    "lower": -0.02612826603325408,
+    "upper": 0.3649185997518785,
+    "level": 0.95,
+    "method": "percentile",
+    "n_resamples": 4000,
+    "n_valid": 4000
+  },
+  "normal_ci": {
+    "point": 0.15728900255754463,
+    "lower": -0.03760070274149929,
+    "upper": 0.35217870785658856,
+    "level": 0.95,
+    "method": "normal_delta",
+    "n_resamples": 0,
+    "n_valid": 0
+  },
+  "coverage": {
+    "n_trials": 400.0,
+    "ci_level": 0.95,
+    "bootstrap_coverage": 0.945,
+    "normal_coverage": 0.9475,
+    "bootstrap_mean_width": 0.39242074990661097,
+    "normal_mean_width": 0.3935216747461903,
+    "truth": 0.1875
+  },
+  "convergence": [
+    {
+      "scale": 0.25,
+      "n_control": 1250.0,
+      "n_treatment": 500.0,
+      "n_total": 1750.0,
+      "point": 0.45000000000000007,
+      "half_width": 0.4614952839646638,
+      "lower": 0.04999919815254346,
+      "upper": 0.9729897660818712
+    },
+    {
+      "scale": 0.5,
+      "n_control": 2500.0,
+      "n_treatment": 1000.0,
+      "n_total": 3500.0,
+      "point": 0.26288659793814434,
+      "half_width": 0.2936606488361408,
+      "lower": 0.005625914107166812,
+      "upper": 0.5929472117794484
+    },
+    {
+      "scale": 1.0,
+      "n_control": 5000.0,
+      "n_treatment": 2000.0,
+      "n_total": 7000.0,
+      "point": 0.16751269035533,
+      "half_width": 0.19668807594733523,
+      "lower": -0.01631132365212545,
+      "upper": 0.377064828242545
+    },
+    {
+      "scale": 2.0,
+      "n_control": 10000.0,
+      "n_treatment": 4000.0,
+      "n_total": 14000.0,
+      "point": 0.18404522613065322,
+      "half_width": 0.14006817526540002,
+      "lower": 0.05131394901627031,
+      "upper": 0.33145029954707034
+    },
+    {
+      "scale": 4.0,
+      "n_control": 20000.0,
+      "n_treatment": 8000.0,
+      "n_total": 28000.0,
+      "point": 0.18463524854744987,
+      "half_width": 0.10145573295370906,
+      "lower": 0.08222620569967112,
+      "upper": 0.28513767160708925
+    }
+  ]
+}
